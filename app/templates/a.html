@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="reset">
 					Reset
 				</button>
 			</div>
@@ -29,7 +29,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="shape-container">
-					<div class="p2-circle bg-purple"></div>
+					<div class="p2-circle bg-purple" ></div>
 					<div class="p2-circle bg-purple"></div>
 					<div class="p2-circle bg-purple"></div>
 					<div class="p2-circle bg-purple"></div>
@@ -64,6 +64,38 @@
 
 <script type="text/javascript">
 	// your solution here
+	// JQuery Code
+
+
+	$ (document).ready(() => {
+		// ("#test").hide();
+		$ (".p2-circle.bg-purple").on("click", () => {
+			$ (".p2-circle.bg-purple").hide();
+		});
+
+		$ (".p2-circle.bg-green").on("click", () => {
+			$ (".p2-circle.bg-green").hide();
+			$ (".p2-circle.bg-blue").hide();
+		});
+
+		$ (".p2-circle.bg-orange.p2-border").on("click", () => {
+			$ (".p2-circle.bg-orange.p2-border").hide();
+		});
+
+		$ ("#gradient-circle").on("mouseover", () => {
+			$ ("#gradient-circle").hide();
+		});
+
+		$ ("#reset").on("click", () => {
+			$ (".p2-circle.bg-purple").show();
+			$ (".p2-circle.bg-green").show();
+			$ (".p2-circle.bg-blue").show();
+			$ (".p2-circle.bg-orange.p2-border").show();
+			$ ("#gradient-circle").show();
+		});
+
+	});
+
 
 </script>
 </body>

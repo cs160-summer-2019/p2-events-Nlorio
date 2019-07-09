@@ -21,7 +21,7 @@
 				<h3>Task 1b</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button id="stop" class="btn btn-light float-right">
 					Stop
 				</button>
 			</div>
@@ -39,8 +39,42 @@
 
 
 <script type="text/javascript">
-
 	// your solution here
+
+	// function change()
+	// {
+	// 	var change = document.getElementById("check");
+	// 	if (change.value == "false")
+	// 	{
+	// 		document.test.savereport = "True";
+	// 		document.test.submit();
+	// 	}
+	// 	else
+	// 	{
+	// 		change.value = "false";
+	// 	}
+	// }
+
+	$ (document).ready(() => {
+
+		$(function() {
+			let stop_if_pressed = true;
+
+			setInterval(function () {
+				if (stop_if_pressed) {
+					$(".shape-container").append($("<div class='p2-circle bg-purple'><\div>"));
+				}
+			}, 1000);
+
+
+			$("#stop").on("click", () => {
+				stop_if_pressed = false;
+			});
+		});
+
+	});
+
+
 
 </script>
 </body>
